@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Rajesh Kumar, Computer Science Student and DevOps enthusiast">
+  <title>Rajesh Kumar | Portfolio</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="file.css" />
+</head>
+<body>
+  <header>
+    <h1>Rajesh Kumar</h1>
+    <p>Computer Science Student | DevOps & Cloud Enthusiast</p>
+  </header>
+
+  <nav aria-label="Main navigation">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        Hi! I'm Rajesh Kumar, a Computer Science student at Delhi University. I have a keen interest in DevOps, Cloud Computing (Azure & AWS), and solving DSA problems using C++.
+      </p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>DevOps: Jenkins, Docker, GitHub Actions, ArgoCD</li>
+        <li>Cloud: Azure, AWS (basic)</li>
+        <li>Programming: C++, Python</li>
+        <li>DSA, System Design Basics</li>
+        <li>Linux, Bash, Networking</li>
+        <li>Git & GitHub</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects-container">
+        <article class="project">
+          <h3>OpenStack Installation Guide</h3>
+          <p>Step-by-step guide to install OpenStack manually.</p>
+          <a href="https://github.com/Rjesh2006/OpenStack-Installation" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+        </article>
+        
+        <article class="project">
+          <h3>DSA Daily Practice Repo</h3>
+          <p>A well-organized collection of DSA problems and solutions.</p>
+          <a href="https://github.com/Rjesh2006/MasteringDSA--Daily_Challenges_and_Solutions" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+        </article>
+        
+        <article class="project">
+          <h3>DevOps Pipeline with GitHub Actions</h3>
+          <p>CI/CD setup using Docker and ArgoCD.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <ul class="contact-list">
+        <li>Email: <a href="mailto:rk2998858@gmail.com">rk2998858@gmail.com</a></li>
+        <li>Phone: <a href="tel:+918447559286">+91 8447559286</a></li>
+        <li>
+          Social:
+          <a href="https://github.com/Rjesh2006" target="_blank" rel="noopener noreferrer">GitHub</a> |
+          <a href="https://www.linkedin.com/in/rajesh-kumar-99975a253" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="current-year">2025</span> Rajesh Kumar. All rights reserved.</p>
+    <p>Last updated: <span id="last-updated">July 2025</span></p>
+    <a href="#" class="back-to-top">Back to Top</a>
+  </footer>
+
+  <script>
+    // Update year automatically
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
