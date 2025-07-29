@@ -27,6 +27,8 @@ body {
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
     position: relative;
 }
 
@@ -37,7 +39,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(214, 214, 197, 0.85);
     z-index: -1;
 }
 
@@ -45,6 +47,7 @@ body::before {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    
 }
 
 a {
@@ -63,7 +66,7 @@ a:hover {
     background-color: var(--primary-color);
     color: var(--white);
     border: none;
-    border-radius: 5px;
+    border-radius: 50px;
     cursor: pointer;
     transition: var(--transition);
 }
@@ -74,7 +77,8 @@ a:hover {
 }
 
 .section {
-    padding: 80px 0;
+    padding: 128px 0;
+    position: relative;
 }
 
 .section h2 {
@@ -110,7 +114,7 @@ header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 12px 20px;
 }
 
 .profile {
@@ -119,17 +123,17 @@ header .container {
 }
 
 .profile-img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    border-radius: 40%;
     object-fit: cover;
-    margin-right: 15px;
-    border: 3px solid var(--primary-color);
+    margin-right: 18x;
+    border: 2px solid var(--primary-color);
 }
 
 .profile h1 {
-    font-size: 1.5rem;
-    margin-bottom: 5px;
+    font-size: 2em;
+    margin-bottom: 10px;
 }
 
 .profile p {
@@ -143,19 +147,20 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 30px;
+    margin-left: 25px;
 }
 
 nav ul li a {
     color: var(--dark-color);
     font-weight: 500;
     position: relative;
+    padding: 5px 0;
 }
 
 nav ul li a::after {
     content: '';
     position: absolute;
-    bottom: -5px;
+    bottom: 0;
     left: 0;
     width: 0;
     height: 2px;
@@ -172,6 +177,7 @@ nav ul li a:hover::after {
     color: var(--white);
     padding: 8px 15px;
     border-radius: 5px;
+    transition: var(--transition);
 }
 
 .resume-btn:hover {
@@ -186,6 +192,7 @@ nav ul li a:hover::after {
     text-align: center;
     font-size: 1.1rem;
     line-height: 1.8;
+    padding-top: 10px;
 }
 
 /* Skills Section */
@@ -193,7 +200,7 @@ nav ul li a:hover::after {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-    margin-top: 40px;
+    margin-top: 10px;
 }
 
 .skill-category {
@@ -205,7 +212,7 @@ nav ul li a:hover::after {
 }
 
 .skill-category:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
 }
 
 .skill-category h3 {
@@ -259,7 +266,7 @@ nav ul li a:hover::after {
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
 }
 
 .project-image {
@@ -275,7 +282,7 @@ nav ul li a:hover::after {
 }
 
 .project-card:hover .project-image img {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .project-info {
@@ -290,12 +297,14 @@ nav ul li a:hover::after {
 .project-info p {
     margin-bottom: 15px;
     color: var(--text-light);
+    font-size: 0.95rem;
 }
 
 .project-link {
     display: inline-block;
     color: var(--primary-color);
     font-weight: 500;
+    font-size: 0.95rem;
 }
 
 .project-link::after {
@@ -336,17 +345,18 @@ nav ul li a:hover::after {
     position: absolute;
     top: 0;
     width: 120px;
-    padding: 5px 10px;
+    padding: 8px 10px;
     background-color: var(--primary-color);
     color: var(--white);
     text-align: center;
     border-radius: 5px;
     font-weight: 500;
+    font-size: 0.9rem;
 }
 
 .timeline-content {
     position: relative;
-    padding: 20px;
+    padding: 25px;
     background-color: var(--white);
     border-radius: 5px;
     box-shadow: var(--box-shadow);
@@ -355,7 +365,7 @@ nav ul li a:hover::after {
 .timeline-content::before {
     content: '';
     position: absolute;
-    top: 20px;
+    top: 25px;
     width: 15px;
     height: 15px;
     background-color: var(--white);
@@ -400,6 +410,12 @@ nav ul li a:hover::after {
     font-weight: 500;
 }
 
+.timeline-content p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
 /* Education Section */
 .education-grid {
     display: grid;
@@ -418,7 +434,7 @@ nav ul li a:hover::after {
 }
 
 .education-item:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
 }
 
 .education-item h3 {
@@ -434,6 +450,7 @@ nav ul li a:hover::after {
 
 .education-item p {
     color: var(--text-light);
+    font-size: 0.95rem;
 }
 
 /* Contact Section */
@@ -455,6 +472,7 @@ nav ul li a:hover::after {
     margin-bottom: 20px;
     display: flex;
     align-items: center;
+    color: var(--text-color);
 }
 
 .contact-info i {
@@ -485,7 +503,7 @@ nav ul li a:hover::after {
 
 .social-links a:hover {
     background-color: var(--secondary-color);
-    transform: translateY(-5px);
+    transform: translateY(-3px);
 }
 
 .contact-form {
@@ -506,6 +524,7 @@ nav ul li a:hover::after {
     border: 1px solid var(--gray);
     border-radius: 5px;
     font-family: inherit;
+    font-size: 1rem;
     transition: var(--transition);
 }
 
@@ -543,11 +562,16 @@ footer {
     background-color: var(--secondary-color);
     color: var(--white);
     text-align: center;
-    padding: 20px 0;
+    padding: 25px 0;
+    margin-top: 60px;
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+    .section {
+        padding: 80px 0;
+    }
+    
     header .container {
         flex-direction: column;
         text-align: center;
@@ -591,6 +615,10 @@ footer {
         left: -8px;
         right: auto;
     }
+    
+    .contact-content {
+        gap: 30px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -600,15 +628,37 @@ footer {
 
     .section h2 {
         font-size: 2rem;
+        margin-bottom: 40px;
+    }
+    
+    .section h2::after {
+        bottom: -12px;
+        height: 3px;
     }
 
     .skills-grid,
     .projects-grid,
     .education-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
-
+    
+    .skill-category,
+    .project-card,
+    .education-item {
+        padding: 20px;
+    }
+    
     .contact-content {
         grid-template-columns: 1fr;
+    }
+    
+    .contact-info,
+    .contact-form {
+        padding: 20px;
+    }
+    
+    footer {
+        padding: 20px 0;
     }
 }
